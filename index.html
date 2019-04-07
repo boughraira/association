@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+  <title  >جمعية الإشعاع الثقافي بمنزل فارسي</title>
+</head>
+<body style="background:#f9feff;">
+  <div class="container mt-4" >
+ <div class="jumbotron ">
+    <img src="https://cdn.glitch.com/18d8e81e-48d3-4d43-8935-55056ca28472%2F28058531_200591387192013_1090046159411181999_n.jpg?1553903326009" class="img-fluid" alt="" >
+    <a href="https://www.facebook.com/Association-pour-le-rayonnement-culturel-%D8%AC%D9%85%D8%B9%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D8%B4%D8%B9%D8%A7%D8%B9-%D8%A7%D9%84%D8%AB%D9%91%D9%82%D8%A7%D9%81%D9%8A-%D8%A8%D9%85%D9%86%D8%B2%D9%84-%D9%81%D8%A7%D8%B1%D8%B3%D9%8A-173002456617573/?hc_ref=ARRBGR3fqNaQHzIA7315tEmLJxXZTQNh0YUYI0mhk082MSuatnWgsArQ27uG086-WaU&fref=tag&__xts__[0]=68.ARB1a5ePpQIJwzuahRsKmFOOPGNu75Xx8cXd_4uxF9KU_K2KXQkqnZZGUqcoCV_t7jgkwFWW8eL2C1vwdXc6buMQNH8IuaBQe8sGeGEzC-UsP-xDS_LsNI5UyvjF68fIt6LYVAPzPelPXKdzFbXRuR1BtAohOFMjRMUtQd_X0ESzVOM9Ygg2SzKup2YZwp_PnJ0mzgG6JUESe9DxL2JoC77pjZfjgnrxPmh5VBaw56LFk80qLyLfCmLr4rUQwfGSjXGf1EE6onfc&__tn__=kC-R">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+    
+   <h1 class="display-3 text-center text-primary">
+  <i class="fas fa-grin-hearts text-danger"></i> <a  class="typewrite" data-period="2000" data-type='[" جمعية الإشعاع الثقافي بمنزل فارسي", "جمعية الإشعاع الثقافي بمنزل فارسي" ]'>
+    <span class="wrap"></span>
+  </a>
+</h1>
+   <h1 class="display-3 text-center">
+     <span class="text-success">صفحة المصاريف</span> 
+   </h1>
+      <form id="book-form">
+        <div class="form-group">
+          <label for="title">: المصاريف</label>
+          <input type="text" id="title" class="form-control">
+        </div>
+        <div class="form-group">
+          <label >: المبلغ </label>
+          <input type="number" id="author" class="form-control">
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+          <label >: التاريخ</label>
+          <input type="date" id="isbn" class="form-control">
+        </div>
+          <div class="form-group">
+           <label >: الوثيقة عدد</label>
+          <input type="number" id="lettre" class="form-control">
+        </div>
+          <input type="submit" value="Ajouter" class="btn btn-primary btn-block">
+        </div>
+        
+      </form>
+      <table class="table table-striped mt-5" id="myTable">
+        <thead>
+          <tr>
+            <th><strong>المصاريف</strong></th>
+            <th><strong> المبلغ</strong></th>
+            <th><strong> التاريخ</strong></th>
+            <th><strong> وثيقة عدد</strong></th>
+            <th></th>
+            
+          </tr>
+        </thead>
+        <tbody id="book-list" >
+        </tbody>
+        <tfoot id="somme">
+           
+                
+                <td id="area_total"></td>
+             <td>: المصاريف الجملية  </td>  
+        </tfoot>
+      </table>
+   <input type="submit" value="المصاريف الجملية" class="btn btn-success" onclick="sumTransaction()" />
+   <button class="btn btn-success" type="submit"> طباعة</button>
+    </div>
+  </div>
+  <div class="container" >
+  <footer class=" container page-footer font-small "  >
+
+    
+    
+
+      
+      <ul class="list-unstyled list-inline text-center">
+        <a class="btn-floating btn-lg " type="button" role="button" href="https://www.facebook.com/profile.php?id=100009239948364"><i class="fa fa-facebook-square" style="font-size:48px;color:black"></i></a>
+        
+        
+          <a class="btn-floating btn-lg " type="button" role="button" href="https://www.linkedin.com/in/hazem-boughraira-099b7415a/"><i class="fa fa-linkedin" style="font-size:48px;color:black"></i></a>
+       <a class="btn-floating btn-lg " type="button" role="button" href ="https://www.instagram.com/hazem_bg/"><i class="fa fa-instagram" style="font-size:48px;color:black"></i></a>
+      <a class="btn-floating btn-lg " type="button" role="button" href ="https://github.com/boughraira"><i class="fa fa-github" style="font-size:48px;color:black"></i></a>
+    </ul>
+      
+
+    
+    
+    <div class=" container text-center py-3 text-white h4" > 
+      <strong style ="color:black;">© 2019 Copyright Hazem Boughraira</strong>
+    
+    </div> 
+    </footer>
+    </div>
+    <script src="main.js"></script>
+  <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+  <script>
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+     $(function () {
+        $('button[type="submit"]').click(function () {
+            var pageTitle = 'جمعية الإشعاع الثقافي بمنزل فارسي',
+                stylesheet = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css',
+                win = window.open('', 'Print', 'width=500,height=300');
+            win.document.write('<html><head><title>' + pageTitle + '</title>' +
+                '<link rel="stylesheet" href="' + stylesheet + '">' +
+                '</head><body>' + $('#myTable')[0].outerHTML + '</body></html>');
+            win.document.close();
+            win.print();
+            win.close();
+            return false;
+        });
+    });
+  </script>
+    </body>
+    </html>
